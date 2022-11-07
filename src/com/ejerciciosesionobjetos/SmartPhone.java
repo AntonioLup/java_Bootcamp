@@ -1,20 +1,25 @@
 package com.ejerciciosesionobjetos;
 
-public class SmartPhone {
+public class SmartPhone extends SmartDevice {
 
-    //atributos
-    int width;
-    int height;
-    String color;
+    String modelo;
 
-    //contructor
-
-    public SmartPhone( int width, int height,String color) {
-        this.width = width;
-        this.height = height;
-        this.color = color;
+    public SmartPhone(){
+        super();
     }
 
+    public SmartPhone(String modelo,  int width, int height,String color) {
+        super(width, height, color);
+        this.modelo = modelo;
+    }
 
-    //metodos
+    @Override
+    public String toString() {
+        return "SmartPhone{" +
+                "modelo='" + modelo + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

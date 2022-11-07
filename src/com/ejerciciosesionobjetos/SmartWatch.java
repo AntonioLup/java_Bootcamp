@@ -1,19 +1,25 @@
 package com.ejerciciosesionobjetos;
 
-public class SmartWatch {
-    //atributos
-    int width;
-    int height;
-    String color;
+public class SmartWatch extends SmartDevice {
 
-    //contructor
+    boolean conectividad;
 
-    public SmartWatch( int width, int height,String color) {
-        this.width = width;
-        this.height = height;
-        this.color = color;
+    public SmartWatch() {
+        super();
     }
 
+    public SmartWatch(boolean conectividad,   int width, int height,String color) {
+        super(width, height, color);
+        this.conectividad = conectividad;
+    }
 
-    //metodos
+    @Override
+    public String toString() {
+        return "SmartWatch{" +
+                "conectividad='" + conectividad + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
